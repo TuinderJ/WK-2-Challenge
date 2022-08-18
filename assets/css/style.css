@@ -1,0 +1,97 @@
+:root {
+  --global-accent-color: rgb(103, 185, 179);
+  --global-main-text-color: rgb(41, 41, 126);
+  --global-margin-sides: 5rem;
+  --global-underline-width: 120%;
+  --header-background-color: rgb(78, 78, 78);
+}
+
+.flex {display: flex;}
+
+h1 {
+  padding: .2rem .5rem .2rem var(--global-margin-sides);
+  font-size: 200%;
+  background-color: var(--global-accent-color);
+  color: var(--header-background-color);
+}
+
+.header {
+  background-color: var(--header-background-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: .2rem 0;
+}
+
+.header nav ul {
+  margin-right: var(--global-margin-sides);
+  gap: 2.5rem;
+}
+
+.header nav ul li {position: relative;}
+
+.header nav ul li::after {
+  width: var(--global-underline-width);
+  height: .2rem;
+  background-color: var(--global-accent-color);
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: calc((var(--global-underline-width) - 100%) / 2 * (-1));
+}
+
+.header nav ul li a {color: var(--global-accent-color);}
+
+/* Hero image goes here */
+
+section {
+  margin: 2rem var(--global-margin-sides);
+  gap: 3%
+}
+
+section h2 {
+  font-size: 200%;
+  text-align: right;
+  color: var(--global-main-text-color);
+  flex: 1;
+  position: relative;
+}
+
+section h2::after {
+  --side-line-height: 115%;
+  height: var(--side-line-height);
+  width: .2rem;
+  position: absolute;
+  background-color: var(--global-main-text-color);
+  top: calc((var(--side-line-height) - 100%) / 2 * (-1));
+  right: -2.5%;
+  content: "";
+}
+
+section div {flex: 6;}
+
+#about-me div {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#about-me div p {color: var(--global-main-text-color);}
+
+/* Put Work here */
+
+#contact-me div ul {
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#contact-me div ul li {position: relative;}
+
+#contact-me div ul li::after {
+  width: var(--global-underline-width);
+  height: .2rem;
+  background-color: var(--global-main-text-color);
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: calc((var(--global-underline-width) - 100%) / 2 * (-1));
+}
